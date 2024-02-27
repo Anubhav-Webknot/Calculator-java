@@ -57,8 +57,13 @@ public class Calculator {
                 break;
             }
             System.out.println("the expression is : " + expression);
-            int answer=calculate(expression);
-            System.out.println("Answer = "+answer);
+            try {
+                int answer = calculate(expression);
+                System.out.println("Answer = " + answer);
+            }catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+
             System.out.println();
 
         }
@@ -132,3 +137,4 @@ public class Calculator {
 
     }
 }
+
